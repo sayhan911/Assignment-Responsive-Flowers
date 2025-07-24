@@ -14,3 +14,71 @@
     font-optical-sizing: auto;
     font-style: normal;
   }
+
+  /* shared styles */
+  body{
+    max-width: 1140px;
+    margin: 30px auto;
+  }
+  .primary-text-color{
+    color: rgba(0, 0, 0, 1);
+  }
+  .secondary-text-color{
+    color: rgba(233, 90, 8, 1);
+  }
+  /* header styles */
+  .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-links{
+    display: flex;
+    gap: 40px;
+  }
+  .nav-links li{
+    list-style: none; 
+  }
+  .nav-links li a{
+    display: inline-block;
+    font-weight: 400;
+    text-decoration: none;
+    color: rgba(137, 135, 161, 1);
+    transition: all 0.3s ease-in-out;
+  }
+  /* to specify the home & cart color */
+  .nav-links li a.home-nav{
+    color: rgba(37, 36, 50, 1);
+    font-weight: 700;
+  }
+  .nav-links li a.cart-nav{
+    color: rgba(37, 36, 50, 1);
+  }
+  /* for hover */
+  .nav-links li a:hover{
+    font-weight: bold;
+    transform: scale(1.05);
+    color: rgba(233, 90, 8, 1);
+  }
+
+/* hero section styles */
+.hero{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: end;
+    margin-top: 120px;
+    padding-top: 120px;
+}
+.hero-text{
+    max-width: 570px;
+}
+.hero-text h1{
+    font-size: 65px;
+    font-weight: 700;
+}
+.hero-text p{
+    font-family: "Inter", sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.5);
+}
