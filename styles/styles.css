@@ -16,9 +16,12 @@
   }
 
   /* shared styles */
-  body{
+  header, main, footer{
     max-width: 1140px;
     margin: 30px auto;
+  }
+  body{
+    
   }
   .primary-text-color{
     color: rgba(0, 0, 0, 1);
@@ -143,7 +146,13 @@
     padding: 19px 80px;
     background-color: rgba(233, 90, 8, 1);
     color: rgba(255, 255, 255, 1);
+    transition: all 0.3s ease-in-out;
 }
+.card-description button:hover{
+    background-color: rgb(255, 29, 29);
+    transform: scale(1.03);
+}
+
 /* trusted seller section */
 .trusted-seller{
     position: relative;
@@ -174,7 +183,58 @@
     color: rgba(0, 0, 0, 0.5);
     margin-bottom: 20px;
 }
+/* newsletter section styles */
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 540px;
+    background-image: url('../assets/news-letter-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .newsletter h2{
+    margin: 0;
+    margin-bottom: 25px;
+    font-size: 50px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 1);
+  }
+  .subscribe{
+    display: flex;
+    justify-content: center;
+  }
+  .subscribe input[type="email"]{
+    padding: 16px 20px;
+    width: 540px;
+    border: 2px solid white;
+    border-right: none;
+    outline: none;
+    transition: all 0.3s ease-in-out;
 
+  }
+  .subscribe input[type="button"]{
+    padding: 20px 55px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(233, 90, 8, 1);
+    transition: all 0.5s ease-in-out;
+  }
+  .subscribe input[type="email"]::placeholder{
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  .subscribe input[type="email"]:focus{
+    border-color: rgba(233, 90, 8, 1);
+  }
+  .subscribe input[type="button"]:hover{
+    background-color: rgb(255, 29, 29);
+    transform: scale(1.03);
+  }
 /* responsive design for mobile devices */
 @media screen and (max-width: 769px){
 
@@ -253,24 +313,40 @@
     flex-direction: column;
     gap: 10px;
 }
+.flower-store{
+    padding: 0 20px;
+}
 .flower-store img{
-    width: auto;
-    height: 400px;
+    width: 100%;
+    height: auto;
 }
 .trusted-badge{
    display: none;
 }
 .trusted-content{
-    margin: 0 auto;
-    display: block;
-    /* margin: 0 25px 0 10px;   */
     padding: 0 20px;
 }
 .trusted-content h2{
+    margin-top: 10px;
+    padding: 0;
     font-size: 24px;
 }
 .trusted-content ul li{
     font-size: 14px;
     padding-right: 10px;
 }
+
+/* newsletter section styles */
+.newsletter{
+    height: 275px;
+}
+.newsletter h2{
+    font-size: 20px;
+}
+.subscribe input[type="email"]{
+    width: 218px;
+  }
+  .subscribe input[type="button"]{
+    padding: 19px 12px;
+  }
 }
