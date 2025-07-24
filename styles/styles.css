@@ -16,12 +16,12 @@
   }
 
   /* shared styles */
-  header, main, footer{
+  header, main{
     max-width: 1140px;
     margin: 30px auto;
   }
   body{
-    
+    background-color: rgba(245, 248, 255, 1);
   }
   .primary-text-color{
     color: rgba(0, 0, 0, 1);
@@ -147,6 +147,7 @@
     background-color: rgba(233, 90, 8, 1);
     color: rgba(255, 255, 255, 1);
     transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
 .card-description button:hover{
     background-color: rgb(255, 29, 29);
@@ -223,6 +224,7 @@
     color: rgba(255, 255, 255, 1);
     background-color: rgba(233, 90, 8, 1);
     transition: all 0.5s ease-in-out;
+    cursor: pointer;
   }
   .subscribe input[type="email"]::placeholder{
     font-size: 16px;
@@ -235,6 +237,67 @@
     background-color: rgb(255, 29, 29);
     transform: scale(1.03);
   }
+  /* footer styles */
+  footer{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 60px 160px;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .footer-logo{
+    width: 360px;
+    margin-right: 40px;
+  }
+  .footer-logo p{
+    font-family: "Inter", sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.5);
+ }
+  .footer-nav {
+    flex: 1 1 auto;
+  }
+ .footer-nav ul{
+    columns: 2;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+ }
+ .footer-nav ul li{
+    margin-bottom: 32px;
+ }
+ .footer-nav ul li a{
+    font-family: "Inter", sans-serif;
+    color: rgba(107, 114, 128, 1);
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+ }
+ .footer-nav ul li a:hover{
+    color: rgba(233, 90, 8, 1);
+    font-weight: 600;
+ }
+ .social{
+    width: 215px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 24px;
+    align-items: center;
+ }
+ .social img{
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    transition: all 0.3s ease-in-out;
+ }
+ .social img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+ }
+ 
 /* responsive design for mobile devices */
 @media screen and (max-width: 769px){
 
@@ -349,4 +412,31 @@
   .subscribe input[type="button"]{
     padding: 19px 12px;
   }
+  /* footer styles */
+  footer{
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto;
+    gap: 20px;
+    padding: 0 30px;
+  }
+  .footer-logo{
+    width: 100%;
+  }
+  .footer-logo p{
+    font-size: 16px;
+ }
+  .social{
+    justify-content: flex-start;
+    width: 100%;
+  }
+.footer-nav{
+    margin: 0;
+}
+ .footer-nav ul{
+    columns: 1;
+ }
+ .footer-nav ul li{
+    margin-bottom: 32px;
+ }
 }
