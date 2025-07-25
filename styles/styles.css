@@ -158,6 +158,14 @@
 }
 
 /* trusted seller section */
+@keyframes rotate{
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 .trusted-seller{
     position: relative;
     margin-top: 200px;
@@ -173,6 +181,8 @@
 }
 .trusted-badge img{
     width: 286px;
+    animation: rotate 5s ease-in-out infinite;
+    
 }
 .trusted-content h2{
     font-size: 50px;
@@ -187,8 +197,107 @@
     color: rgba(0, 0, 0, 0.5);
     margin-bottom: 20px;
 }
+/* latest deal styles */
+/* deals heading styles */
+.latest-deals{
+    margin: 120px auto;
+}
+.deals-content{
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.deals-content h2{
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+.deals-content p{
+    font-family: "Inter", sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px;
+}
+/* deals cards styles */
+.deals-cards{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 28px;
+    height: 423px;
+}
+.left-column{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+.right-column {
+    display: grid;
+    grid-template-rows: auto;
+}
+.deal-box{
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 14px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+.right-column .deal-box{
+    border-radius: 22px;
+}
+/* for dark overlay */
+.left-deals, 
+.right-deals{
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.419);
+    z-index: 1;
+    border-radius: 14px;
+}
+.right-deals{
+    border-radius: 22px;
+}
+.deal-box h4,
+.deal-box a {
+  position: relative;
+  z-index: 2;
+}
+
+/* deal box text styles */
+.deal-box h4{
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 10px;
+}
+.deal-box a{
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+.deal-box a:hover{
+    transform: scale(1.1);
+}
+
+/* right column text particular styles */
+.right-column > div > h4{
+    font-size: 40px;
+}
+.right-column > div > a{
+    font-size: 28px;
+}
+
 /* newsletter section styles */
-.newsletter {
+.newsletter{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -219,7 +328,7 @@
     transition: all 0.3s ease-in-out;
 
   }
-  .subscribe input[type="button"]{
+  .subscribe button{
     padding: 20px 55px;
     border: none;
     font-size: 16px;
@@ -236,7 +345,7 @@
   .subscribe input[type="email"]:focus{
     border-color: rgba(233, 90, 8, 1);
   }
-  .subscribe input[type="button"]:hover{
+  .subscribe button:hover{
     background-color: rgb(255, 29, 29);
     transform: scale(1.03);
   }
@@ -356,7 +465,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px 20px;
-    margin: 30px 10px;
+    margin: 30px auto;
+    padding: 0 20px;
 }
 .card-content img{
     width: 100%;
@@ -401,7 +511,50 @@
     font-size: 14px;
     padding-right: 10px;
 }
+/* latest deals section styles */
+.latest-deals{
+    margin: 0 auto;
+    margin-top: 140px;
+    margin-bottom: 40px;
+}
+.deals-content{
+    width: 100%;
+}
+.deals-content h2{
+    font-size: 24px;
+}
+.deals-content p{
+    font-size: 14px;
+    padding: 0 20px;
+}
+/* deals cards styles */
+.deals-cards{
+    grid-template-columns: 1fr;
+    gap: 20px;
+    height: auto;
+    padding: 20px;
+}
+.deal-box{
+    height: 230px;
+}
+.left-column,
+.right-column {
+    grid-template-rows: auto;
+}
+.right-column .deal-box{
+    border-radius: 14px;
+}
+.right-deals{
+    border-radius: 14px;
+}
 
+/* right column text particular styles */
+.right-column > div > h4{
+    font-size: 20px;
+}
+.right-column > div > a{
+    font-size: 16px;
+}
 /* newsletter section styles */
 .newsletter{
     height: 275px;
@@ -412,34 +565,34 @@
 .subscribe input[type="email"]{
     width: 218px;
   }
-  .subscribe input[type="button"]{
+.subscribe button{
     padding: 19px 12px;
   }
   /* footer styles */
-  footer{
+footer{
     display: flex;
     flex-direction: column;
     margin: 50px auto;
     gap: 20px;
     padding: 0 30px;
   }
-  .footer-logo{
+.footer-logo{
     width: 100%;
   }
-  .footer-logo p{
+.footer-logo p{
     font-size: 16px;
  }
-  .social{
-    justify-content: flex-start;
-    width: 100%;
-  }
 .footer-nav{
     margin: 0;
 }
- .footer-nav ul{
+.footer-nav ul{
     columns: 1;
  }
- .footer-nav ul li{
+.footer-nav ul li{
     margin-bottom: 32px;
  }
+.social{
+    justify-content: flex-start;
+    width: 100%;
+  }
 }
