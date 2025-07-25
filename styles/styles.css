@@ -22,6 +22,8 @@
   }
   body{
     background-color: rgba(245, 248, 255, 1);
+    padding: 0;
+    margin: 0;
   }
   .primary-text-color{
     color: rgba(0, 0, 0, 1);
@@ -412,7 +414,6 @@
  
 /* responsive design for mobile devices */
 @media screen and (max-width: 576px){
-
     /* header section styles */
 .nav-links li a.home-nav, 
 .nav-links li a.shop-nav, 
@@ -564,6 +565,7 @@
 }
 .subscribe input[type="email"]{
     width: 218px;
+    border-radius: none;
   }
 .subscribe button{
     padding: 19px 12px;
