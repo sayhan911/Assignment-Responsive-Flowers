@@ -121,7 +121,10 @@
 }
 .card-content img{
     width: 270px;
-    height: 323px;
+    height: 315px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 .card-description h4{
     font-size: 22px;
@@ -299,7 +302,7 @@
  }
  
 /* responsive design for mobile devices */
-@media screen and (max-width: 769px){
+@media screen and (max-width: 576px){
 
     /* header section styles */
 .nav-links li a.home-nav, 
@@ -357,7 +360,7 @@
 }
 .card-content img{
     width: 100%;
-    height: auto;
+    height: 215px;
 }
 .card-description h4{
     font-size: 16px; 
